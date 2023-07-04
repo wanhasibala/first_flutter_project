@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forst_app/dice_roller.dart';
 
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
@@ -16,15 +17,14 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [color1, color2],
-            begin: startAlignment,
-            end: endAlignment,
-          ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [color1, color2],
+          begin: startAlignment,
+          end: endAlignment,
         ),
-        child: Center(
-          child: Image.asset('assets/images/dice-2.png'),
-        ));
+      ),
+      child: Center(child: DiceRoller()),
+    );
   }
 }
